@@ -1,0 +1,2 @@
+# imagetotext
+Image to text a python wrapper to grab text from images and save as text files using Google Tesseract Engine. Tesseract is an optical character recognition engine for various operating systems and python Imaging Library (PIL),It adds image processing capabilities to your Python interpreter.  The aim of this project is to develop such a tool which takes an Image as input and extract characters (alphabets, digits, symbols) from it. The Image can be of handwritten document or Printed document. It can be used as a form of data entry from printed records.
