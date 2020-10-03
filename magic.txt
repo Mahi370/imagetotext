@@ -1,0 +1,29 @@
+is precompiled by the database for faster execution, Once a PreparedStatemant has been
+compiled, it can still be customized by adjusting predefined parameters. Prepared
+statements are useful in applications that have to run the same general SQL command
+over and over.
+
+Use the preparedStatement (String) method of connection to create
+preparedStatement objects. Use the? Character as a placeholder for values to be
+substituted later, For example:
+
+PreparedStatement pstmt = con. preparedStatement
+
+("INSERT INTO ORDERS (ORDER_ID, CUSTOMER _ID-TOTAL) VALUES (?,2.2)";
+INSERT INTO MUSKETEERS (NAME) VALUES (‘John d’Artangan’)
+
+As you see, the string terminates twice. One solution is to manually replace the single
+quote’ with two single quotes”, the Oracle escape sequence for one single quote. This
+solution, requires you to escape every character that your database treats as special—not
+an easy task and not consistent with writing platform-independent code. A. far better
+solution is to use a preparedStatement and pass the string using its setString() method, as
+shown below. The preparedStatement automatically escapes the string as necessary for
+your database:
+
+PreparedStatement pstmt = con.preparedStatement
+
+(“INSERT INTO MUSKETEERS (NAME) VALUES (?)") ;
+
+stmt setString (1,"John d’Artagan”);
+
+Pstmt.executeUpdate ();
